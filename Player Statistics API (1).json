@@ -1,0 +1,274 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2024-06-17T20:01:10Z",
+    "title" : "Player Statistics"
+  },
+  "host" : "zwxz8myzrl.execute-api.us-east-2.amazonaws.com",
+  "basePath" : "/prod",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/playerBUS/getPlayerBUS" : {
+      "get" : {
+        "description" : "Returns a player's BUS Score from a specified time period",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "startWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "season",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "endWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerBUS/getRecentPlayerBUS" : {
+      "get" : {
+        "description" : "Returns a player's more recently available BUS score",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerInfo/getPlayerCombine" : {
+      "get" : {
+        "description" : "Return's a player's combine results",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerStatistics/getAveragePlayerStatistics" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "statistics",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerStatistics/getPlayerFantasyPoints" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "startWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "season",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "endWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerStatistics/getPlayerGameStatistics" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "startWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "season",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "endWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerStatistics/getPlayerSnaps" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "startWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "season",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "endWeek",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    },
+    "/playerStatistics/getRecentPlayerStatistics" : {
+      "get" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "statistics",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "playerId",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        },
+        "security" : [ {
+          "api_key" : [ ]
+        } ]
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "api_key" : {
+      "type" : "apiKey",
+      "name" : "x-api-key",
+      "in" : "header"
+    }
+  },
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    }
+  }
+}
